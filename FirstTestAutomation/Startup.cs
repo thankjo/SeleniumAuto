@@ -21,5 +21,16 @@ namespace FirstTestAutomation
             Thread.Sleep(2000);
             webdriver.Close();
         }
+
+        [NUnit.Framework.TestCase]
+        public void ExecuteCheckboxesTest()
+        {
+            IWebDriver webdriver = new ChromeDriver();
+            PageObjects.CheckBox checkBox = new PageObjects.CheckBox(webdriver);
+            checkBox.LoadForm();
+            checkBox.FillCheckBox();
+            Thread.Sleep(2000);
+            webdriver.Close();
+        }
     }
 }
