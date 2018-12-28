@@ -32,5 +32,16 @@ namespace FirstTestAutomation
             Thread.Sleep(2000);
             webdriver.Close();
         }
+
+        [NUnit.Framework.TestCase]
+        public void ExecuteDatePickerTest()
+        {
+            IWebDriver webdriver = new ChromeDriver();
+            PageObjects.DatePicker datePicker = new PageObjects.DatePicker(webdriver);
+            datePicker.LoadForm();
+            datePicker.PickDate();
+            Thread.Sleep(2000);
+            webdriver.Close();
+        }
     }
 }
