@@ -43,5 +43,16 @@ namespace FirstTestAutomation
             Thread.Sleep(2000);
             webdriver.Close();
         }
+
+        [NUnit.Framework.TestCase]
+        public void ExecuteFileUploadTest()
+        {
+            IWebDriver webdriver = new ChromeDriver();
+            PageObjects.FileUpload fileUpload = new PageObjects.FileUpload(webdriver);
+            fileUpload.LoadForm();
+            fileUpload.UploadForm();
+            Thread.Sleep(5000);
+            webdriver.Close();
+        }
     }
 }
