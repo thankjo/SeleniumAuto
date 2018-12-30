@@ -59,9 +59,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InlineDataAttribute.cs" />
     <Compile Include="PageObjects\AutoComplete.cs" />
     <Compile Include="PageObjects\CheckBox.cs" />
     <Compile Include="PageObjects\DatePicker.cs" />
+    <Compile Include="PageObjects\DropDownWithCustomElement.cs" />
     <Compile Include="PageObjects\FileUpload.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

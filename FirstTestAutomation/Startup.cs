@@ -54,5 +54,17 @@ namespace FirstTestAutomation
             Thread.Sleep(5000);
             webdriver.Close();
         }
+
+        [NUnit.Framework.TestCase("DatePicker", "http://formy-project.herokuapp.com/datepicker")]
+        [NUnit.Framework.TestCase("File Upload", "http://formy-project.herokuapp.com/fileupload")]
+        [NUnit.Framework.TestCase("Modal", "http://formy-project.herokuapp.com/modal")]
+        public void ExecuteDropDownWithCustomElementTest(string selectedItem,string pageUrl)
+        {
+            IWebDriver webdriver = new ChromeDriver();
+            PageObjects.DropDownWithCustomElement dropDown = new PageObjects.DropDownWithCustomElement(webdriver);
+            dropDown.LoadForm();
+            dropDown.SelectDropDown(selectedItem, pageUrl);
+            webdriver.Close();
+        }
     }
 }
