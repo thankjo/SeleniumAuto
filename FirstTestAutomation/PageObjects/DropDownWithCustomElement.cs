@@ -39,13 +39,20 @@ namespace FirstTestAutomation.PageObjects
                 if(itemAnchor.Text.ToLower().Equals(linkText.ToLower()))
                 {
                     itemAnchor.Click();
-                    WebDriverWait wait = new WebDriverWait(_driver, System.TimeSpan.FromSeconds(10));
-                    wait.Until(d => d.FindElement(By.TagName("html")));
+                    WaitforSomeTime();
                     Assert.AreEqual(url, _driver.Url);
                     break;
                 }
             }           
         }
 
+        public void WaitforSomeTime()
+        {
+            WebDriverWait wait = new WebDriverWait(_driver, System.TimeSpan.FromSeconds(10));
+            wait.Until(d => d.FindElement(By.TagName("html")));
+        }
+
     }
 }
+
+{
